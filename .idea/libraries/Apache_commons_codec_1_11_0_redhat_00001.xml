@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Apache commons-codec-1.11.0.redhat-00001">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Requirements/Apache commons-codec-1.11.0.redhat-00001.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
