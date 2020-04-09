@@ -8,4 +8,5 @@ This project is for you to learn and get into development in java. Please do not
 
 # Requirements
 You require Java 9 to run the code if the version is not available Java 8 will do just fine.
-This project was developed using Jetbrains Intellij Edu.
+This project was developed using Jetbrains Intellij Edu.#
+You can use your preffered IDE.
