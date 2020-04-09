@@ -1,0 +1,35 @@
+*{
+    -fx-primary:#2d6cdf;
+    -fx-secondary:#482ff7;
+    -fx-closeButton:#FF605C;
+    -fx-minimizeButton:#00CA4E;
+    -fx-maximizeButton:#FFBD44;
+}
+
+.window{
+    -fx-background-color: -fx-primary;
+}
+
+.close_button{
+    -fx-fill: -fx-closeButton;
+}
+
+.close_button:hover{
+    -fx-stroke: red;
+}
+
+.minimize_button{
+    -fx-fill: -fx-minimizeButton;
+}
+
+.minimize_button:hover{
+    -fx-stroke: green;
+}
+
+.maximize_button{
+    -fx-fill: -fx-maximizeButton;
+}
+
+.maximize_button:hover{
+    -fx-stroke: yellow;
+}

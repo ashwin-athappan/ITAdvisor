@@ -1,0 +1,66 @@
+*{
+    -fx-primary:linear-gradient(to bottom left, #A868A0, #2D75E8);
+    -fx-secondary:#c86f5e;
+    -fx-window:#c5e3f6;
+    -fx-closeButton:#FF605C;
+    -fx-minimizeButton:#00CA4E;
+    -fx-maximizeButton:#FFBD44;
+}
+
+.main_background{
+    -fx-background-color: -fx-primary;
+}
+
+.window_pane{
+    -fx-background-color: -fx-window;
+}
+
+.IT_Statistics{
+    -fx-background-color: -fx-secondary;
+}
+
+.close_button{
+    -fx-fill: -fx-closeButton;
+}
+
+.close_button:hover{
+    -fx-stroke: red;
+}
+
+.minimize_button{
+    -fx-fill: -fx-minimizeButton;
+}
+
+.minimize_button:hover{
+    -fx-stroke: green;
+}
+
+.maximize_button{
+    -fx-fill: -fx-maximizeButton;
+}
+
+.maximize_button:hover{
+    -fx-stroke: #ffa45c;
+}
+
+.selectionButton{
+    -fx-background-color: linear-gradient(to right, rgb(69, 104, 220), rgb(176, 106, 179));
+    -fx-border-radius: 20px;
+    -fx-background-radius: 30px;
+}
+
+.MainButton{
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: rgb(69, 104, 220) ;
+}
+
+.SignInLabel{
+    -fx-font-family: "Microsoft Himalaya";
+    -fx-font-size: 25px;
+}
+
+.ADMIN_BUTTON{
+    -fx-background-color: #1f4287;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 20px;
+}

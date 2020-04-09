@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Circle?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Advisor.Admin.ViewBills.ViewBills">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox fx:id="Box" onMouseDragged="#setDraggable" prefHeight="25.0" prefWidth="600.0" styleClass="window" stylesheets="@../AddClient/AddClient.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Circle fill="DODGERBLUE" onMouseClicked="#close" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" styleClass="close_button">
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </Circle>
+                  <Circle fill="DODGERBLUE" layoutX="110.0" layoutY="110.0" onMouseClicked="#maximize" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" styleClass="maximize_button">
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </Circle>
+                  <Circle fill="DODGERBLUE" layoutX="310.0" layoutY="110.0" onMouseClicked="#minimize" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" styleClass="minimize_button">
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </Circle>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <TableView fx:id="BillsTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <columns>
+                  <TableColumn fx:id="userName" prefWidth="149.0" text="User Name" />
+                  <TableColumn fx:id="tax" minWidth="6.0" prefWidth="118.0" text="Tax" />
+                  <TableColumn fx:id="profit" prefWidth="111.0" text="Profit" />
+                  <TableColumn fx:id="Img" prefWidth="221.0" text="Image" />
+              </columns>
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Refresh" onAction="#handleRefresh"/>
+                      <MenuItem mnemonicParsing="false" text="Accept" onAction="#handleAccept"/>
+                      <MenuItem mnemonicParsing="false" text="Reject" onAction="#handleReject"/>
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+            </TableView>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

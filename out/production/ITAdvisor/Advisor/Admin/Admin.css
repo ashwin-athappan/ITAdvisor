@@ -1,0 +1,48 @@
+*{
+    -fx-primary:#226089;
+    -fx-window:#c5e3f6;
+    -fx-closeButton:#FF605C;
+    -fx-minimizeButton:#00CA4E;
+    -fx-maximizeButton:#FFBD44;
+}
+
+.Tab_main{
+    -fx-background-color: -fx-primary;
+}
+
+.window_pane{
+    -fx-background-color: -fx-window;
+}
+
+.buttons{
+    -fx-background-color: #00d1ff;
+}
+
+.close_button{
+    -fx-fill: -fx-closeButton;
+}
+
+.close_button:hover{
+    -fx-stroke: red;
+}
+
+.minimize_button{
+    -fx-fill: -fx-minimizeButton;
+}
+
+.minimize_button:hover{
+    -fx-stroke: green;
+}
+
+.maximize_button{
+    -fx-fill: -fx-maximizeButton;
+}
+
+.maximize_button:hover{
+    -fx-stroke: yellow;
+}
+
+.menu_bar{
+    -fx-background-color: #3d6cb9;
+    -fx-text-fill: #ffffff;
+}

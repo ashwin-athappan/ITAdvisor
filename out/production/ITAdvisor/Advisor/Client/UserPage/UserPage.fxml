@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+
+<AnchorPane fx:id="UserPane" prefHeight="400.0" prefWidth="600.0" styleClass="anchorPane" stylesheets="@UserPage.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Advisor.Client.UserPage.UserPage">
+   <children>
+      <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox fx:id="Box" onMouseDragged="#setDraggable" prefHeight="25.0" prefWidth="600.0" styleClass="window" stylesheets="@../../Admin/AddClient/AddClient.css">
+               <children>
+                  <Circle fill="DODGERBLUE" onMouseClicked="#close" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" styleClass="close_button">
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </Circle>
+                  <Circle fill="DODGERBLUE" layoutX="110.0" layoutY="110.0" onMouseClicked="#maximize" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" styleClass="maximize_button">
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </Circle>
+                  <Circle fill="DODGERBLUE" layoutX="310.0" layoutY="110.0" onMouseClicked="#minimize" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" styleClass="minimize_button">
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </Circle>
+               </children>
+            </HBox>
+             <JFXTabPane prefHeight="377.0" prefWidth="600.0">
+                 <tabs>
+                     <Tab text="Main">
+                         <content>
+                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="IncomeLabel" layoutX="439.0" layoutY="108.0" styleClass="text" stylesheets="@UserPage.css" text="Label" />
+                              <Label fx:id="TaxLabel" layoutX="439.0" layoutY="165.0" styleClass="text" stylesheets="@UserPage.css" text="Label" />
+                              <Label fx:id="BalanceLabel" layoutX="439.0" layoutY="225.0" styleClass="text" stylesheets="@UserPage.css" text="Label" />
+                              <Label fx:id="NameLabel" layoutX="126.0" layoutY="108.0" prefHeight="35.0" prefWidth="174.0" styleClass="text" stylesheets="@UserPage.css" text="Label" />
+                              <JFXButton layoutX="45.0" layoutY="286.0" onAction="#handleChangePassword" styleClass="text" stylesheets="@UserPage.css" text="Change Password" />
+                              <JFXButton layoutX="186.0" layoutY="286.0" onAction="#handlePayTaxes" styleClass="text" stylesheets="@UserPage.css" text="Pay Taxes" />
+                              <JFXButton layoutX="340.0" layoutY="286.0" onAction="#bills" styleClass="text" stylesheets="@UserPage.css" text="Submit Bills to Reclaim" />
+                           </children>
+                        </AnchorPane>
+                         </content>
+                     </Tab>
+                     <Tab onSelectionChanged="#displayChart" text="Chart">
+                         <content>
+                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <PieChart fx:id="pieChart" layoutX="168.0" layoutY="64.0" prefHeight="211.0" prefWidth="264.0" stylesheets="@UserPage.css" />
+                           </children></AnchorPane>
+                         </content>
+                     </Tab>
+                 </tabs>
+             </JFXTabPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

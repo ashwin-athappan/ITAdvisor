@@ -1,0 +1,21 @@
+.anchorPane{
+    -fx-background-color: #1f4287;
+}
+
+.text{
+    -fx-text-fill: #FFFFFF;
+}
+
+.button{
+    -fx-background-color: #3d5af1;
+}
+
+.button:hover{
+    -fx-background-color: #28c7fa;
+}
+
+.chart{
+    -fx-rotate: 0;
+    -fx-border-color: #ffffff;
+    -fx-background-color: #2f89fc;
+}

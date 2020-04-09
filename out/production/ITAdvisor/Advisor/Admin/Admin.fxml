@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+
+<AnchorPane fx:id="MainPane" prefHeight="425.0" prefWidth="591.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Advisor.Admin.Admin">
+   <children>
+      <VBox prefHeight="425.0" prefWidth="585.0">
+         <children>
+            <Label prefHeight="25.0" prefWidth="601.0" styleClass="window_pane" stylesheets="@Admin.css">
+               <graphic>
+                  <HBox fx:id="Box" onDragDetected="#setDraggable" prefHeight="21.0" prefWidth="200.0" spacing="6.0" stylesheets="@Admin.css">
+                     <children>
+                        <Circle fill="DODGERBLUE" onMouseClicked="#close" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" styleClass="close_button">
+                           <HBox.margin>
+                              <Insets left="4.0" top="4.0" />
+                           </HBox.margin>
+                        </Circle>
+                        <Circle fill="DODGERBLUE" layoutX="110.0" layoutY="110.0" onMouseClicked="#maximize" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" styleClass="maximize_button">
+                           <HBox.margin>
+                              <Insets left="4.0" top="4.0" />
+                           </HBox.margin>
+                        </Circle>
+                        <Circle fill="DODGERBLUE" layoutX="310.0" layoutY="110.0" onMouseClicked="#minimize" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" styleClass="minimize_button">
+                           <HBox.margin>
+                              <Insets left="4.0" top="4.0" />
+                           </HBox.margin>
+                        </Circle>
+                     </children>
+                  </HBox>
+               </graphic>
+            </Label>
+            <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@Admin.css">
+               <center>
+                  <JFXTabPane prefHeight="200.0" prefWidth="200.0" styleClass="Tab_main" stylesheets="@Admin.css" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                     <tabs>
+                      <Tab text="Main">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" stylesheets="@Admin.css">
+                                 <children>
+                                    <JFXButton layoutX="77.0" layoutY="126.0" onAction="#handleAddClients" styleClass="buttons" stylesheets="@Admin.css" text="Add Client">
+                                       <graphic>
+                                          <ImageView fitHeight="36.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="file:/C:/Users/ashwi/IdeaProjects/ITAdvisor/Images/icons8_add_user_male_64px.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <JFXButton layoutX="240.0" layoutY="126.0" onAction="#handleViewClients" styleClass="buttons" stylesheets="@Admin.css" text="View Clients">
+                                       <graphic>
+                                          <ImageView fitHeight="36.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="file:/C:/Users/ashwi/IdeaProjects/ITAdvisor/Images/icons8_person_80px.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <JFXButton fx:id="MailClientButton" layoutX="410.0" layoutY="126.0" onAction="#handleMail" styleClass="buttons" stylesheets="@Admin.css" text="Mail Client">
+                                       <graphic>
+                                          <ImageView fitHeight="36.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="file:/C:/Users/ashwi/IdeaProjects/ITAdvisor/Images/icons8_mail_network_50px.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <JFXButton fx:id="ViewRequestButton" layoutX="158.0" layoutY="202.0" onAction="#handleViewRequests" styleClass="buttons" stylesheets="@Admin.css" text="View Requests">
+                                       <graphic>
+                                          <ImageView fitHeight="36.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="file:/C:/Users/ashwi/IdeaProjects/ITAdvisor/Images/icons8_person_80px.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <JFXButton layoutX="345.0" layoutY="202.0" onAction="#handleViewBills" styleClass="buttons" stylesheets="@Admin.css" text="View Bills">
+                                       <graphic>
+                                          <ImageView fitHeight="36.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="file:/C:/Users/ashwi/IdeaProjects/ITAdvisor/Images/icons8_person_80px.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Settings">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <RadioButton fx:id="DarkModeButton" layoutX="228.0" layoutY="98.0" mnemonicParsing="false" onAction="#applyDarkMode" text="Dark Mode" />
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                     </tabs>
+                  </JFXTabPane>
+               </center>
+               <top>
+                  <MenuBar styleClass="menu_bar" stylesheets="@Admin.css" BorderPane.alignment="CENTER">
+                    <menus>
+                      <Menu mnemonicParsing="false" styleClass="menu_bar" text="File">
+                        <items>
+                          <MenuItem mnemonicParsing="false" onAction="#MenuBarClose" text="Close" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" styleClass="menu_bar" text="Edit">
+                        <items>
+                          <MenuItem mnemonicParsing="false" onAction="#applyDarkMode" text="Dark Mode" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" styleClass="menu_bar" text="Help">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="About" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+               </top>
+            </BorderPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

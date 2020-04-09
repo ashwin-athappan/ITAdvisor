@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Circle?>
+
+<AnchorPane prefHeight="367.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Advisor.Client.Reclaim.Reclaim">
+   <children>
+      <ImageView fx:id="ImagePreview" fitHeight="150.0" fitWidth="150.0" layoutX="150.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="60.0">
+         <image>
+            <Image url="file:/C:/Users/ashwi/IdeaProjects/ITAdvisor/Images/icons8_diamond_64px.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="254.0" layoutY="226.0" onAction="#chooseImage" text="Choose Image" />
+      <HBox fx:id="Box" layoutX="10.0" layoutY="10.0" onMouseDragged="#setDraggable" prefHeight="25.0" prefWidth="600.0" styleClass="window" stylesheets="@../../Admin/AddClient/AddClient.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Circle fill="DODGERBLUE" onMouseClicked="#close" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" styleClass="close_button">
+               <HBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </HBox.margin>
+            </Circle>
+            <Circle fill="DODGERBLUE" layoutX="110.0" layoutY="110.0" onMouseClicked="#maximize" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" styleClass="maximize_button">
+               <HBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </HBox.margin>
+            </Circle>
+            <Circle fill="DODGERBLUE" layoutX="310.0" layoutY="110.0" onMouseClicked="#minimize" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" styleClass="minimize_button">
+               <HBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </HBox.margin>
+            </Circle>
+         </children>
+      </HBox>
+      <JFXButton layoutX="273.0" layoutY="293.0" onAction="#handleUpload" text="Upload" />
+   </children>
+</AnchorPane>
