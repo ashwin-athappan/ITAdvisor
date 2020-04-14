@@ -339,4 +339,38 @@ public class Admin implements Initializable {
         parentStage = temp;
         parentStage.show();
     }
+
+    public void showAbout(ActionEvent actionEvent) {
+        String location = "/Advisor/About/About.fxml";
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(location));
+            Parent parent =loader.load();
+            Stage stage = new Stage(StageStyle.TRANSPARENT);
+            stage.setTitle("View Bills");
+            stage.setScene(new Scene(parent));
+            Scene scene = stage.getScene();
+            try {
+                FileInputStream in = new FileInputStream("DarkMode.txt");
+                DataInputStream DIS = new DataInputStream(in);
+                darkMode = Boolean.parseBoolean(DIS.readUTF());
+                if(darkMode){
+                    System.out.println("Dark Mode is set");
+                }else{
+                    System.out.println("Dark Mode is not set");
+                }
+                in.close();
+                DIS.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            if(darkMode){
+                scene.getStylesheets().add(getClass().getResource("/Advisor/Dark_Mode.css").toExternalForm());
+            }else{
+                scene.getStylesheets().remove(getClass().getResource("/Advisor/Dark_Mode.css").toExternalForm());
+            }
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
