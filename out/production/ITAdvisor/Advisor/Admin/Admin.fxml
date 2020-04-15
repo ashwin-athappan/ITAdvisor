@@ -127,7 +127,7 @@
                       </Menu>
                       <Menu mnemonicParsing="false" styleClass="menu_bar" text="Help">
                         <items>
-                          <MenuItem mnemonicParsing="false" text="About" />
+                          <MenuItem mnemonicParsing="false" onAction="#showAbout" text="About" />
                         </items>
                       </Menu>
                     </menus>

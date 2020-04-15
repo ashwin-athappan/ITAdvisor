@@ -152,7 +152,15 @@ public class ViewBills implements Initializable {
 
     public void handleReject(ActionEvent actionEvent) {
         billView selectedBill = BillsTable.getSelectionModel().getSelectedItem();
+        imgLoc = selectedBill.getImgLoc();
+        String q = "DELETE from bills where image = '"+imgLoc+"';";
+        if(DBH.execAction(q)){
+            System.out.println("Deleted");
+        }else{
+            System.out.println("Not deleted");
+        }
 
+        loadData();
     }
 
     public static class billView{
